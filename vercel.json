@@ -1,19 +1,11 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "source": "/api/:path*",
+      "destination": "https://railway.app/api/:path*"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server/index.js"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "PORT": "5000"
-  }
+  ]
 }

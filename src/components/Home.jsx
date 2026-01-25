@@ -72,7 +72,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className='bg-gradient-to-b from-black via-black to-gray-900 min-w-screen min-h-[calc(100vh+110px)] rotate-285 translate-x-[calc(27%)] relative'>
+                    <div className='bg-linear-to-b from-black via-black to-gray-900 min-w-screen min-h-[calc(100vh+110px)] rotate-285 translate-x-[calc(27%)] relative'>
                         <img src="image/myphoto bgremove.png" alt="photo" className='w-1/3 absolute left-6/20 rotate-75 drop-shadow-[1px_1px_10px_#e5e7eb] filter' />
                     </div>
                 </div>

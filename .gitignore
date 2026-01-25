@@ -104,3 +104,5 @@ local.json
 *.pem
 dist-ssr
 *.local
+.vercel
+.env*.local
