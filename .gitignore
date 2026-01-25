@@ -6,16 +6,31 @@ yarn-error.log*
 package-lock.json
 yarn.lock
 
-# Environment variables
+# Environment variables - CRITICAL: Never commit these
 .env
 .env.local
 .env.*.local
+.env.production.local
+.env.test.local
+.env.development.local
+
+# Sensitive Files - API Keys, Credentials, Secrets
+.aws/
+.ssh/
+*.pem
+*.key
+*.pub
+*.ppk
+credentials
+~/.netrc
+.docker/config.json
 
 # Build output
 dist/
 build/
 .vite/
 .next/
+out/
 
 # IDE
 .vscode/
@@ -24,25 +39,68 @@ build/
 *.swo
 *~
 .DS_Store
+.project
+.classpath
+.c9/
+*.iml
+.sublime-workspace
 
 # OS
 Thumbs.db
 .DS_Store
+.AppleDouble
+.LSOverride
+.TemporaryItems
+.Spotlight-V100
+.Trashes
 
 # Database files
 *.db
 *.sqlite
 db.json
+*.sqlite3
+*.mongo
 
 # Logs
 logs/
 *.log
+*.log*
+lerna-debug.log*
 
 # Testing
 coverage/
 .nyc_output/
+*.lcov
 
 # Cache
 .cache/
 .eslintcache
 .stylelintcache
+.node-cache/
+.pem/
+
+# Environment-specific
+npm-shrinkwrap.json
+.yarn-integrity
+
+# IDE Plugins
+.eslintignore
+
+# Local development files
+.env.local.js
+config.local.js
+local.json
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.temp
+*~
+.swp
+.swo
+
+# Misc
+.DS_Store
+*.pem
+dist-ssr
+*.local
