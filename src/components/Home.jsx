@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
         const handleResize = () => {
             // Apply responsive design below 1475x773
-            const isSmallScreen = window.innerWidth < 1475 || window.innerHeight < 773
+            const isSmallScreen = window.innerWidth < 1460 || window.innerHeight < 700
             setIsResponsive(isSmallScreen)
         }
 
