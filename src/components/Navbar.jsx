@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div className="fixed w-full z-[9999]">
-            <nav className={`transition-all duration-500 ease-in-out w-full bg-white/90 backdrop-blur-md border-b border-gray-200 px-4 py-3 lg:px-7 lg:py-5`}>
+            <nav className={`transition-all duration-500 ease-in-out w-full bg-white/90 backdrop-blur-md border-b border-gray-200 px-4 py-1.5 lg:px-7 lg:py-2`}>
                 <div className="flex items-center justify-between px-6 max-w-[1400px] mx-auto relative">
 
                     <div className="flex items-center pr-1 transition-all duration-500 border-black border">

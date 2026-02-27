@@ -4,9 +4,7 @@ import Navbar from './Navbar'
 
 const Layout = () => (
   <div className="flex flex-col min-h-screen">
-    <div className='fixed top-0 left-0 w-full z-10'>
-      <Navbar />
-    </div>
+    <Navbar />
     <div className='flex-1'>
       <Outlet />
     </div>

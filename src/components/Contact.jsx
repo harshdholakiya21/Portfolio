@@ -43,7 +43,7 @@ const Contact = () => {
       <div className="min-w-full min-h-screen bg-linear-to-b from-black via-gray-900 to-gray-800 text-white">
 
 
-        <section className="pt-36 pb-20 max-w-5xl mx-auto px-4 py-12">
+        <section className="pt-26 pb-20 max-w-5xl mx-auto px-4 py-12">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Get In Touch</h2>
 
           <div className="bg-white/6 border border-white/10 rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 hover:border-white/20 hover:shadow-2xl transition-all duration-300">
