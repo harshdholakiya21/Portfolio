@@ -5,42 +5,55 @@ const Navbar = () => {
     const isCondition = window.innerWidth < 1400 || window.innerHeight < 650
 
     return (
-        <div>
-            <nav className={`bg-transparent z-50 fixed w-full top-0 left-0 right-0 ${isCondition ? "px-5 py-3" : "px-7 py-5"}`}>
-                <div className={`flex justify-between items-center ${isCondition ? "px-4 gap-2" : "px-6 gap-4"}`}>
+        <div className={`fixed w-full flex justify-center z-50 transition-all duration-500 ${isCondition ? "top-4" : "top-0"}`}>
+            <nav className={`transition-all duration-500 ease-in-out border border-white/10
+                ${isCondition
+                    ? "bg-black/40 backdrop-blur-md px-6 py-2 rounded-full shadow-2xl"
+                    : "bg-transparent w-full px-7 py-5"
+                }`}>
+                <div className={`flex items-center gap-8 ${isCondition ? "" : "justify-between px-6 w-full max-w-[1400px] mx-auto"}`}>
 
-                    <div className="flex items-center border pr-1">
-                        <div className="flex items-center space-x-2">
-                            <img src="/image/favicon.ico" alt="Logo" width="30" height="24" className="inline-block" />
-                            <span className={`text-black font-bold ${isCondition ? "text-base" : "text-lg"}`}>Portfolio</span>
+                    {!isCondition && (
+                        <div className="flex items-center border pr-1 border-white/20">
+                            <div className="flex items-center space-x-2">
+                                <img src="/image/favicon.ico" alt="Logo" width="30" height="24" className="inline-block" />
+                                <span className="text-white font-bold text-lg">Portfolio</span>
+                            </div>
                         </div>
-                    </div>
+                    )}
+
                     <div className="flex">
-                        <ul className={`flex text-white ${isCondition ? "text-base gap-4" : "text-[19px] gap-6"}`}>
+                        <ul className={`flex items-center text-white transition-all duration-500 
+                            ${isCondition ? "text-sm gap-4" : "text-[19px] gap-8"}`}>
                             <li>
-                                <NavLink to={"/Home"} className={(e) =>
-                                    `${e.isActive ? "font-bold bg-white text-black p-1 px-2.5 rounded-xl" : "hover:drop-shadow-[0_0_10px_#e5e7eb]"}`
+                                <NavLink to={"/Home"} className={({ isActive }) =>
+                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    ${isActive ? "font-bold bg-white text-black" : "hover:bg-white/10"}`
                                 }>Home</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/AboutMe"} className={({ isActive }) =>
-                                    `${isActive ? "font-bold bg-white text-black p-1 px-2.5 rounded-xl" : "hover:drop-shadow-[0_0_10px_#e5e7eb]"}`
-                                }>About Me</NavLink>
+                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    ${isActive ? "font-bold bg-white text-black" : "hover:bg-white/10"}`
+                                }>About</NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/Skills"} className={(e) =>
-                                    `${e.isActive ? "font-bold bg-white text-black p-1 px-2.5 rounded-xl" : "hover:drop-shadow-[0_0_10px_#e5e7eb]"}`
+                                <NavLink to={"/Skills"} className={({ isActive }) =>
+                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    ${isActive ? "font-bold bg-white text-black" : "hover:bg-white/10"}`
                                 }>Skills</NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/Projects"} className={(e) =>
-                                    `${e.isActive ? "font-bold bg-white text-black p-1 px-2.5 rounded-xl" : "hover:drop-shadow-[0_0_10px_#e5e7eb]"}`
+                                <NavLink to={"/Projects"} className={({ isActive }) =>
+                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    ${isActive ? "font-bold bg-white text-black" : "hover:bg-white/10"}`
                                 }>Projects</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/Contact"} className={({ isActive }) =>
-                                    `${isActive ? "font-bold bg-white text-black p-1 px-2.5 rounded-xl" : "hover:drop-shadow-[0_0_10px_#e5e7eb]"}`
-                                } >Contact</NavLink>
+                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    ${isActive ? "font-bold bg-white text-black" : "hover:bg-white/10"}`
+                                }>Contact</NavLink>
                             </li>
                         </ul>
                     </div>
