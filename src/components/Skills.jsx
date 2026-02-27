@@ -9,8 +9,7 @@ export default function Skills() {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
-        const response = await fetch(`${baseUrl}/api/skills`)
+        const response = await fetch('/api/skills')
         if (!response.ok) {
           throw new Error('Failed to fetch skills')
         }

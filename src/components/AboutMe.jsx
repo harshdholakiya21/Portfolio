@@ -8,8 +8,7 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
-        const response = await fetch(`${baseUrl}/api/about`)
+        const response = await fetch('/api/about')
         if (!response.ok) {
           throw new Error('Failed to fetch about data')
         }
