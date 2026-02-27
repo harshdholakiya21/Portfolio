@@ -6,7 +6,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
-        <div className="fixed w-full z-50">
+        <div className="fixed w-full z-[9999]">
             <nav className={`transition-all duration-500 ease-in-out w-full 
                 ${isCondition
                     ? "bg-white/80 backdrop-blur-md border-b border-gray-200 px-4 py-3"
@@ -97,10 +97,10 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile menu dropdown */}
-                    <div className={`lg:hidden absolute top-full left-0 right-0 mt-2 transition-all duration-300 origin-top overflow-hidden
-                        ${isMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}>
-                        <ul className={`flex flex-col gap-2 p-4 rounded-b-2xl shadow-xl backdrop-blur-xl border-x border-b
-                            ${isCondition ? "bg-white/95 text-gray-800 border-gray-200" : "bg-black/90 text-white border-white/10"}`}>
+                    <div className={`lg:hidden absolute top-full left-0 right-0 mt-3 transition-all duration-300 origin-top overflow-hidden z-[10000]
+                        ${isMenuOpen ? "scale-y-100 opacity-100 translate-y-0" : "scale-y-0 opacity-0 -translate-y-4 pointer-events-none"}`}>
+                        <ul className={`flex flex-col gap-2 p-4 rounded-xl shadow-2xl backdrop-blur-2xl border
+                            ${isCondition ? "bg-white text-gray-800 border-gray-100" : "bg-black/95 text-white border-white/10"}`}>
                             <li>
                                 <NavLink to={"/Home"} onClick={() => setIsMenuOpen(false)} className={({ isActive }) =>
                                     `block px-4 py-3 rounded-xl transition-all ${isActive ? "bg-black text-white font-bold" : "hover:bg-black/5"}`

@@ -35,17 +35,15 @@ const Home = () => {
 
             </div>
 
-            <div className={`bg-gradient-to-b from-black via-black to-gray-900 transition-all duration-1000 ease-out z-0
-                ${isCondition
-                    ? "absolute min-h-[150vh] min-w-[200vw] rotate-[15deg] translate-y-[55%]"
-                    : "min-w-screen min-h-[calc(100vh+110px)] rotate-285 translate-x-[calc(27%)] relative"}`}>
+            {!isCondition && (
+                <div className={`bg-gradient-to-b from-black via-black to-gray-900 transition-all duration-1000 ease-out z-0
+                    min-w-screen min-h-[calc(100vh+110px)] rotate-285 translate-x-[calc(27%)] relative`}>
 
-                {!isCondition && (
                     <img src="image/myphoto bgremove.png" alt="photo"
                         className='w-1/3 absolute left-6/20 rotate-75 drop-shadow-[1px_1px_10px_#e5e7eb] filter'
                     />
-                )}
-            </div>
+                </div>
+            )}
         </div>
     )
 }
