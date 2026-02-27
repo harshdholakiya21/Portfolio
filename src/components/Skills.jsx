@@ -44,9 +44,6 @@ export default function Skills() {
 
   return (
     <>
-      <div className="bg-black pt-16 w-full fixed top-0 z-9">
-        <span className='bg-gray-200 min-w-28.25 min-h-7.5 fixed top-5 left-14'></span>
-      </div>
       <SkillsSection data={skillsData} />
     </>
   )

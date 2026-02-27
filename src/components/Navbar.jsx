@@ -7,19 +7,13 @@ const Navbar = () => {
 
     return (
         <div className="fixed w-full z-[9999]">
-            <nav className={`transition-all duration-500 ease-in-out w-full 
-                ${isCondition
-                    ? "bg-white/80 backdrop-blur-md border-b border-gray-200 px-4 py-3"
-                    : "bg-transparent px-7 py-5"
-                }`}>
+            <nav className={`transition-all duration-500 ease-in-out w-full bg-white/90 backdrop-blur-md border-b border-gray-200 px-4 py-3 lg:px-7 lg:py-5`}>
                 <div className="flex items-center justify-between px-6 max-w-[1400px] mx-auto relative">
 
-                    <div className={`flex items-center pr-1 transition-all duration-500 
-                        ${isCondition ? "border-transparent" : "border-black border"}`}>
+                    <div className="flex items-center pr-1 transition-all duration-500 border-black border">
                         <div className="flex items-center space-x-2">
                             <img src="/image/favicon.ico" alt="Logo" width="30" height="24" className="inline-block" />
-                            <span className={`font-bold transition-all duration-500 
-                                ${isCondition ? "text-gray-900 text-lg" : "text-black text-lg"}`}>
+                            <span className="font-bold text-gray-900 text-lg">
                                 Portfolio
                             </span>
                         </div>
@@ -27,62 +21,54 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex">
-                        <ul className={`flex items-center transition-all duration-500 
-                            ${isCondition ? "text-[15px] gap-4 text-gray-800 font-medium" : "text-[19px] gap-6 text-white"}`}>
+                        <ul className="flex items-center gap-6 text-[17px] text-gray-800 font-medium">
                             <li>
                                 <NavLink to={"/Home"} className={({ isActive }) =>
-                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    `transition-all duration-300 px-3 py-1 rounded-xl text-[17px]
                                     ${isActive
-                                        ? (isCondition ? "font-bold bg-black text-white" : "font-bold bg-white text-black")
-                                        : (isCondition ? "hover:text-black hover:bg-gray-100" : "hover:drop-shadow-[0_0_10px_#e5e7eb]")
-                                    }`
+                                        ? "font-bold bg-black text-white"
+                                        : "hover:text-black hover:bg-gray-100"}`
                                 }>Home</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/AboutMe"} className={({ isActive }) =>
-                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    `transition-all duration-300 px-3 py-1 rounded-xl text-[17px]
                                     ${isActive
-                                        ? (isCondition ? "font-bold bg-black text-white" : "font-bold bg-white text-black")
-                                        : (isCondition ? "hover:text-black hover:bg-gray-100" : "hover:drop-shadow-[0_0_10px_#e5e7eb]")
-                                    }`
+                                        ? "font-bold bg-black text-white"
+                                        : "hover:text-black hover:bg-gray-100"}`
                                 }>About</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/Skills"} className={({ isActive }) =>
-                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    `transition-all duration-300 px-3 py-1 rounded-xl text-[17px]
                                     ${isActive
-                                        ? (isCondition ? "font-bold bg-black text-white" : "font-bold bg-white text-black")
-                                        : (isCondition ? "hover:text-black hover:bg-gray-100" : "hover:drop-shadow-[0_0_10px_#e5e7eb]")
-                                    }`
+                                        ? "font-bold bg-black text-white"
+                                        : "hover:text-black hover:bg-gray-100"}`
                                 }>Skills</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/Projects"} className={({ isActive }) =>
-                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    `transition-all duration-300 px-3 py-1 rounded-xl text-[17px]
                                     ${isActive
-                                        ? (isCondition ? "font-bold bg-black text-white" : "font-bold bg-white text-black")
-                                        : (isCondition ? "hover:text-black hover:bg-gray-100" : "hover:drop-shadow-[0_0_10px_#e5e7eb]")
-                                    }`
+                                        ? "font-bold bg-black text-white"
+                                        : "hover:text-black hover:bg-gray-100"}`
                                 }>Projects</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/Contact"} className={({ isActive }) =>
-                                    `transition-all duration-300 px-3 py-1 rounded-xl 
+                                    `transition-all duration-300 px-3 py-1 rounded-xl text-[17px]
                                     ${isActive
-                                        ? (isCondition ? "font-bold bg-black text-white" : "font-bold bg-white text-black")
-                                        : (isCondition ? "hover:text-black hover:bg-gray-100" : "hover:drop-shadow-[0_0_10px_#e5e7eb]")
-                                    }`
+                                        ? "font-bold bg-black text-white"
+                                        : "hover:text-black hover:bg-gray-100"}`
                                 }>Contact</NavLink>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Mobile Hamburger Button */}
                     <div className="lg:hidden flex items-center">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className={`p-2 transition-colors duration-300 rounded-lg 
-                                ${isCondition ? "text-gray-900 hover:bg-black/5" : "text-white hover:bg-white/10"}`}
+                            className="p-2 transition-colors duration-300 rounded-lg text-gray-900 hover:bg-black/5"
                         >
                             {isMenuOpen ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

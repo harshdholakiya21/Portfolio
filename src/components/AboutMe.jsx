@@ -43,9 +43,7 @@ const AboutMe = () => {
 
   return (
     <>
-      <div className="bg-black pt-16 w-full fixed top-0 z-9">
-        <span className='bg-gray-200 min-w-28.25 min-h-7.5 fixed top-5 left-14'></span>
-      </div>
+
       <section className="relative overflow-hidden pt-36 pb-20 bg-linear-to-b from-black via-gray-900 to-gray-800 text-white" id="about">
         <div className="absolute -right-20 top-0 w-[55%] h-[90%] transform rotate-12 bg-linear-to-br from-black via-gray-900 to-gray-700 opacity-50 pointer-events-none"></div>
 

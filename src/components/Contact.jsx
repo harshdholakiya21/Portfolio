@@ -41,9 +41,7 @@ const Contact = () => {
   return (
     <>
       <div className="min-w-full min-h-screen bg-linear-to-b from-black via-gray-900 to-gray-800 text-white">
-        <div className="bg-black pt-16 w-full fixed top-0 z-9">
-          <span className='bg-gray-200 min-w-28.25 min-h-7.5 fixed top-5 left-14'></span>
-        </div>
+
 
         <section className="pt-36 pb-20 max-w-5xl mx-auto px-4 py-12">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Get In Touch</h2>
@@ -94,8 +92,8 @@ const Contact = () => {
 
               {status && (
                 <div className={`mb-4 p-3 rounded-lg text-sm ${status.type === 'success' ? 'bg-green-500/20 text-green-300 border border-green-500/50' :
-                    status.type === 'error' ? 'bg-red-500/20 text-red-300 border border-red-500/50' :
-                      'bg-blue-500/20 text-blue-300 border border-blue-500/50'
+                  status.type === 'error' ? 'bg-red-500/20 text-red-300 border border-red-500/50' :
+                    'bg-blue-500/20 text-blue-300 border border-blue-500/50'
                   }`}>
                   {status.msg}
                 </div>
