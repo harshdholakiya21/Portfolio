@@ -106,3 +106,6 @@ dist-ssr
 *.local
 .vercel
 .env*.local
+
+# Ignore local replacements file that may contain secrets during cleanup
+scripts/replacements.txt

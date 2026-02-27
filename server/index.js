@@ -39,6 +39,32 @@ app.get('/api/contacts', async (req, res) => {
   }
 })
 
+// Get skills data
+app.get('/api/skills', async (req, res) => {
+  try {
+    const db = req.app.locals.db
+    const skillsColl = db.collection('skills')
+    const skills = await skillsColl.find({}).toArray()
+    res.json(skills)
+  } catch (err) {
+    console.error('Error fetching skills:', err)
+    res.status(500).json({ error: 'Failed to fetch skills' })
+  }
+})
+
+// Get about-me data
+app.get('/api/about', async (req, res) => {
+  try {
+    const db = req.app.locals.db
+    const aboutColl = db.collection('about')
+    const aboutData = await aboutColl.findOne({})
+    res.json(aboutData)
+  } catch (err) {
+    console.error('Error fetching about data:', err)
+    res.status(500).json({ error: 'Failed to fetch about data' })
+  }
+})
+
 // Submit contact form
 app.post('/api/contacts', async (req, res) => {
   try {
@@ -84,6 +110,7 @@ async function startServer() {
     console.log('Connected to MongoDB')
 
     const db = client.db(MONGO_DB)
+    app.locals.db = db
     contactsColl = db.collection('contacts')
 
     app.listen(PORT, () => {
