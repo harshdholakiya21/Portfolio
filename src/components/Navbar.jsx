@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const isCondition = window.innerWidth < 1400 || window.innerHeight < 650
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
         <div className="fixed w-full z-50">
@@ -11,7 +12,7 @@ const Navbar = () => {
                     ? "bg-white/80 backdrop-blur-md border-b border-gray-200 px-4 py-3"
                     : "bg-transparent px-7 py-5"
                 }`}>
-                <div className="flex items-center justify-between px-6 max-w-[1400px] mx-auto">
+                <div className="flex items-center justify-between px-6 max-w-[1400px] mx-auto relative">
 
                     <div className={`flex items-center pr-1 transition-all duration-500 
                         ${isCondition ? "border-transparent" : "border-black border"}`}>
@@ -24,7 +25,8 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="flex">
+                    {/* Desktop Menu */}
+                    <div className="hidden lg:flex">
                         <ul className={`flex items-center transition-all duration-500 
                             ${isCondition ? "text-[15px] gap-4 text-gray-800 font-medium" : "text-[19px] gap-6 text-white"}`}>
                             <li>
@@ -70,6 +72,58 @@ const Navbar = () => {
                                         ? (isCondition ? "font-bold bg-black text-white" : "font-bold bg-white text-black")
                                         : (isCondition ? "hover:text-black hover:bg-gray-100" : "hover:drop-shadow-[0_0_10px_#e5e7eb]")
                                     }`
+                                }>Contact</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Mobile Hamburger Button */}
+                    <div className="lg:hidden flex items-center">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className={`p-2 transition-colors duration-300 rounded-lg 
+                                ${isCondition ? "text-gray-900 hover:bg-black/5" : "text-white hover:bg-white/10"}`}
+                        >
+                            {isMenuOpen ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+
+                    {/* Mobile menu dropdown */}
+                    <div className={`lg:hidden absolute top-full left-0 right-0 mt-2 transition-all duration-300 origin-top overflow-hidden
+                        ${isMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}>
+                        <ul className={`flex flex-col gap-2 p-4 rounded-b-2xl shadow-xl backdrop-blur-xl border-x border-b
+                            ${isCondition ? "bg-white/95 text-gray-800 border-gray-200" : "bg-black/90 text-white border-white/10"}`}>
+                            <li>
+                                <NavLink to={"/Home"} onClick={() => setIsMenuOpen(false)} className={({ isActive }) =>
+                                    `block px-4 py-3 rounded-xl transition-all ${isActive ? "bg-black text-white font-bold" : "hover:bg-black/5"}`
+                                }>Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/AboutMe"} onClick={() => setIsMenuOpen(false)} className={({ isActive }) =>
+                                    `block px-4 py-3 rounded-xl transition-all ${isActive ? "bg-black text-white font-bold" : "hover:bg-black/5"}`
+                                }>About</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/Skills"} onClick={() => setIsMenuOpen(false)} className={({ isActive }) =>
+                                    `block px-4 py-3 rounded-xl transition-all ${isActive ? "bg-black text-white font-bold" : "hover:bg-black/5"}`
+                                }>Skills</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/Projects"} onClick={() => setIsMenuOpen(false)} className={({ isActive }) =>
+                                    `block px-4 py-3 rounded-xl transition-all ${isActive ? "bg-black text-white font-bold" : "hover:bg-black/5"}`
+                                }>Projects</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={"/Contact"} onClick={() => setIsMenuOpen(false)} className={({ isActive }) =>
+                                    `block px-4 py-3 rounded-xl transition-all ${isActive ? "bg-black text-white font-bold" : "hover:bg-black/5"}`
                                 }>Contact</NavLink>
                             </li>
                         </ul>
