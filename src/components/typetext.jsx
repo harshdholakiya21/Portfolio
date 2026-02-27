@@ -35,11 +35,14 @@ export default function Typewriter({ isCondition }) {
   }, [text, isDeleting, loopIndex]);
 
   return (
-    <div className={`transition-all duration-500 ${isCondition ? "text-center" : "pl-20"}`}>
-      <h1 className={`font-bold text-gray-800 transition-all duration-500 ${isCondition ? "text-4xl pt-10" : "text-5xl pt-40"}`}>
-        Hello, I'm <span className='text-[#7644bb] '>Harsh Dholakiya</span>
+    <div className={`transition-all duration-500 overflow-hidden 
+      ${isCondition ? "text-center px-6" : "pl-20"}`}>
+      <h1 className={`font-bold text-gray-800 transition-all duration-500 
+        ${isCondition ? "text-3xl md:text-4xl pt-6" : "text-5xl pt-40"}`}>
+        Hello, I'm <span className='text-[#7644bb]'>Harsh Dholakiya</span>
       </h1>
-      <h2 className={`font-semibold text-gray-700 pt-6 transition-all duration-500 ${isCondition ? "text-2xl" : "text-3xl"}`}>
+      <h2 className={`font-semibold text-gray-700 pt-6 transition-all duration-500 
+        ${isCondition ? "text-xl md:text-2xl" : "text-3xl"}`}>
         A Passionate{' '}
         <span className="text-gray-500">
           {text}
