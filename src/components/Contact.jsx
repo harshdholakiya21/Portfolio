@@ -16,9 +16,7 @@ const Contact = () => {
     setStatus({ type: 'loading', msg: 'Sending...' })
 
     // Replace with your backend API endpoint
-    const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
-    
-    fetch(`${API_BASE}/api/contacts`, {
+    fetch('/api/contacts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
@@ -46,10 +44,10 @@ const Contact = () => {
         <div className="bg-black pt-16 w-full fixed top-0 z-9">
           <span className='bg-gray-200 min-w-28.25 min-h-7.5 fixed top-5 left-14'></span>
         </div>
-        
+
         <section className="pt-36 pb-20 max-w-5xl mx-auto px-4 py-12">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Get In Touch</h2>
-          
+
           <div className="bg-white/6 border border-white/10 rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 hover:border-white/20 hover:shadow-2xl transition-all duration-300">
             {/* Info column */}
             <div className="p-8 border-b md:border-b-0 md:border-r border-white/10">
@@ -65,7 +63,7 @@ const Contact = () => {
                     harshdholakiya2111@gmail.com
                   </a>
                 </div>
-                
+
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Location</p>
                   <p className="text-white text-lg">Remote</p>
@@ -75,12 +73,12 @@ const Contact = () => {
                   <p className="text-gray-400 text-sm mb-3">Social Links</p>
                   <div className="flex gap-4">
                     <a href="https://github.com/harshdholakiya21" target='_blank' aria-label="GitHub" className="w-12 h-12 rounded-lg bg-white/10 hover:bg-blue-500 flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-white/10">
-                  <img src="image/github.svg" alt="github" className='invert rounded-2xl h-9' />
+                      <img src="image/github.svg" alt="github" className='invert rounded-2xl h-9' />
                     </a>
                     <a href="https://www.linkedin.com/in/harshdholakiya/" target='_blank' aria-label="LinkedIn" className="w-12 h-12 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-white/10">
-                  <img src="image/linkedln.svg" alt="linkedln" className="invert h-9 "/>
+                      <img src="image/linkedln.svg" alt="linkedln" className="invert h-9 " />
                     </a>
-                    
+
                   </div>
                 </div>
 
@@ -95,11 +93,10 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-white mb-6">Send a Message</h3>
 
               {status && (
-                <div className={`mb-4 p-3 rounded-lg text-sm ${
-                  status.type === 'success' ? 'bg-green-500/20 text-green-300 border border-green-500/50' :
-                  status.type === 'error' ? 'bg-red-500/20 text-red-300 border border-red-500/50' :
-                  'bg-blue-500/20 text-blue-300 border border-blue-500/50'
-                }`}>
+                <div className={`mb-4 p-3 rounded-lg text-sm ${status.type === 'success' ? 'bg-green-500/20 text-green-300 border border-green-500/50' :
+                    status.type === 'error' ? 'bg-red-500/20 text-red-300 border border-red-500/50' :
+                      'bg-blue-500/20 text-blue-300 border border-blue-500/50'
+                  }`}>
                   {status.msg}
                 </div>
               )}
