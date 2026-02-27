@@ -65,6 +65,19 @@ app.get('/api/about', async (req, res) => {
   }
 })
 
+// Get projects data
+app.get('/api/projects', async (req, res) => {
+  try {
+    const db = req.app.locals.db
+    const projectsColl = db.collection('projects')
+    const projects = await projectsColl.find({}).toArray()
+    res.json(projects)
+  } catch (err) {
+    console.error('Error fetching projects:', err)
+    res.status(500).json({ error: 'Failed to fetch projects' })
+  }
+})
+
 // Submit contact form
 app.post('/api/contacts', async (req, res) => {
   try {

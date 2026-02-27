@@ -5,6 +5,7 @@ import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Projects from './components/Projects'
 import Layout from './components/Layout'
 import './App.css'
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: '/Home', element: <Home /> },
       { path: '/AboutMe', element: <AboutMe /> },
       { path: '/Skills', element: <Skills /> },
+      { path: '/Projects', element: <Projects /> },
       { path: '/Contact', element: <Contact /> }
     ]
   }
