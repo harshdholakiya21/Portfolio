@@ -18,7 +18,7 @@ const Layout = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar isMobile={isMobile} />
       <div className='flex-1'>
-        {isMobile ? <MainContent /> : <Outlet />}
+        {isMobile ? <MainContent isMobile={isMobile} /> : <Outlet />}
       </div>
     </div>
   )

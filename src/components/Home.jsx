@@ -4,7 +4,7 @@ import Typewriter from './typetext'
 import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
-const Home = () => {
+const Home = ({ isMobile }) => {
     const isCondition = window.innerWidth < 1400 || window.innerHeight < 650
 
     return (
@@ -27,9 +27,15 @@ const Home = () => {
                         </a>
                     </button>
                     <button className='hover:scale-110 transition-transform' title='Contact'>
-                        <NavLink to={"/contact"}>
-                            <img src="image/contact.svg" alt="contact" />
-                        </NavLink>
+                        {isMobile ? (
+                            <a href="#contact">
+                                <img src="image/contact.svg" alt="contact" />
+                            </a>
+                        ) : (
+                            <NavLink to={"/Contact"}>
+                                <img src="image/contact.svg" alt="contact" />
+                            </NavLink>
+                        )}
                     </button>
                 </div>
 

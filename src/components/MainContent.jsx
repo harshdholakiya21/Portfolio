@@ -5,10 +5,10 @@ import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
 
-const MainContent = () => {
+const MainContent = ({ isMobile }) => {
     return (
         <main>
-            <Home />
+            <Home isMobile={isMobile} />
             <AboutMe />
             <Skills />
             <Projects />
