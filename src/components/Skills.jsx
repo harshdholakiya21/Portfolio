@@ -44,7 +44,9 @@ export default function Skills() {
 
   return (
     <>
-      <SkillsSection data={skillsData} />
+      <div id="skills">
+        <SkillsSection data={skillsData} />
+      </div>
     </>
   )
 }

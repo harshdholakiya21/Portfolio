@@ -8,7 +8,7 @@ const Home = () => {
     const isCondition = window.innerWidth < 1400 || window.innerHeight < 650
 
     return (
-        <div className={`home relative bg-gray-200 overflow-hidden min-h-screen ${isCondition ? "flex items-center justify-center" : "max-h-screen"}`}>
+        <div id="home" className={`home relative bg-gray-200 overflow-hidden min-h-screen ${isCondition ? "flex items-center justify-center" : "max-h-screen"}`}>
             <div className={`text transition-all duration-700 
                 ${isCondition ? "z-10 text-center scale-90" : "absolute top-1/5 "}`}>
 

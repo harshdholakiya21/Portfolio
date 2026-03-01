@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="min-w-full min-h-screen bg-linear-to-b from-black via-gray-900 to-gray-800 text-white">
+      <div id="contact" className="min-w-full min-h-screen bg-linear-to-b from-black via-gray-900 to-gray-800 text-white">
 
 
         <section className="pt-26 pb-20 max-w-5xl mx-auto px-4 py-12">
