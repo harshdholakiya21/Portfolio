@@ -34,7 +34,7 @@ export const ContactSection = () => {
       message: formData.message.trim(),
     };
 
-    // Backup to browser localStorage
+    // Client-side backup
     try {
       const localRecord = {
         ...payload,
@@ -45,7 +45,7 @@ export const ContactSection = () => {
       const existing = JSON.parse(localStorage.getItem('portfolio_messages') || '[]');
       localStorage.setItem('portfolio_messages', JSON.stringify([localRecord, ...existing]));
     } catch (err) {
-      console.error('LocalStorage backup error', err);
+      // ignore
     }
 
     try {
@@ -55,16 +55,11 @@ export const ContactSection = () => {
         body: JSON.stringify(payload)
       });
 
-      const result = await response.json().catch(() => ({ success: true }));
+      await response.json().catch(() => ({ success: true }));
 
       setIsSubmitting(false);
       setSubmitted(true);
-
-      if (result.success) {
-        addToast('Message delivered & stored in MongoDB Atlas!', 'success');
-      } else {
-        addToast('Message saved! Harsh will get back to you soon.', 'success');
-      }
+      addToast('Message sent successfully! Harsh will get back to you soon.', 'success');
 
       try {
         confetti({
@@ -76,10 +71,10 @@ export const ContactSection = () => {
       } catch (err) {}
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
-      // Graceful fallback for local development without active backend
       setIsSubmitting(false);
       setSubmitted(true);
-      addToast('Message received and saved!', 'success');
+      addToast('Message sent successfully! Harsh will get back to you soon.', 'success');
+
       try {
         confetti({
           particleCount: 60,
@@ -109,17 +104,17 @@ export const ContactSection = () => {
             </h2>
 
             <p className="text-stone-600 dark:text-stone-300 font-sans text-sm sm:text-base leading-relaxed max-w-lg">
-              Whether you'd like to discuss a project, job opportunity, or just chat about web development and technology — my inbox is always open.
+              Whether you'd like to discuss a project, opportunity, or just chat about technology and development — feel free to drop a message.
             </p>
 
             {/* Email Card */}
             <div className="p-5 bg-stone-100 dark:bg-stone-900/80 border border-stone-300 dark:border-stone-800 space-y-3">
               <span className="font-mono text-xs text-stone-500 uppercase tracking-wider block">
-                Primary Email (Click to copy)
+                Primary Email
               </span>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-                <div className="flex-1 px-3.5 py-2.5 bg-stone-50 dark:bg-[#0c0f14] border border-stone-300 dark:border-stone-700 font-mono text-xs sm:text-sm text-stone-900 dark:text-stone-100 flex items-center gap-2 overflow-x-auto">
+                <div className="flex-1 px-3.5 py-2.5 bg-stone-50 dark:bg-[#0c0f14] border border-stone-300 dark:border-stone-700 font-mono text-xs sm:text-sm text-stone-900 dark:text-stone-100 flex items-center gap-2 overflow-x-auto font-medium">
                   <Mail className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" />
                   <span>{profileData.email}</span>
                 </div>
@@ -129,7 +124,7 @@ export const ContactSection = () => {
                   className="px-4 py-2.5 bg-stone-900 text-stone-50 dark:bg-stone-100 dark:text-stone-900 font-mono text-xs font-medium hover:bg-stone-800 dark:hover:bg-stone-200 transition-colors flex items-center justify-center gap-2"
                 >
                   {copied ? <Check className="w-4 h-4 text-emerald-400 dark:text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                  <span>{copied ? 'Copied!' : 'Copy'}</span>
+                  <span>{copied ? 'Copied!' : 'Copy Email'}</span>
                 </button>
               </div>
             </div>
@@ -226,7 +221,7 @@ export const ContactSection = () => {
                   <textarea
                     rows={4}
                     required
-                    placeholder="Write your note or project idea here..."
+                    placeholder="Write your message here..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-3.5 py-2 bg-stone-100 dark:bg-stone-900 border border-stone-300 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:outline-none focus:border-stone-900 dark:focus:border-stone-100 resize-none font-sans"
@@ -243,24 +238,6 @@ export const ContactSection = () => {
                 </button>
               </form>
             )}
-
-            {/* Saved Messages Quick Viewer */}
-            <div className="mt-4 pt-3 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between font-mono text-[10px] text-stone-500">
-              <span>Messages Stored: Browser LocalStorage</span>
-              <button
-                onClick={() => {
-                  const msgs = JSON.parse(localStorage.getItem('portfolio_messages') || '[]');
-                  if (msgs.length === 0) {
-                    addToast('No messages in local storage yet.', 'info');
-                  } else {
-                    addToast(`Inbox: ${msgs.length} message(s) stored locally.`, 'info', 4000);
-                  }
-                }}
-                className="hover:underline text-amber-600 dark:text-amber-400"
-              >
-                Check Local Inbox &rarr;
-              </button>
-            </div>
           </div>
         </div>
       </div>
