@@ -91,7 +91,7 @@ Motivated **4th-Year B.Tech Computer Science & Engineering (Artificial Intellige
 
 ## 📬 Contact & Links
 
-- 🌐 **Portfolio Website**: [https://github.com/harshdholakiya21/Portfolio](https://github.com/harshdholakiya21/Portfolio)
+- 🌐 **Portfolio Website**: [https://harshdholakiya-portfolio.vercel.app](https://harshdholakiya-portfolio.vercel.app)
 - 📧 **Direct Email**: [harshdholakiya2111@gmail.com](mailto:harshdholakiya2111@gmail.com)
 - 🐙 **GitHub**: [@harshdholakiya21](https://github.com/harshdholakiya21)
 - 💼 **LinkedIn**: [linkedin.com/in/harshdholakiya](https://www.linkedin.com/in/harshdholakiya/)
