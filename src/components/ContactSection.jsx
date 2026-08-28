@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Copy, Check, Send, Sparkles, ArrowUpRight } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 import confetti from 'canvas-confetti';
 import { profileData } from '../data/profile';
 import { useToast } from './Toast';
@@ -150,6 +150,17 @@ export const ContactSection = () => {
               >
                 <LinkedinIcon className="w-4 h-4" />
                 <span>LinkedIn</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-stone-400" />
+              </a>
+
+              <a
+                href={profileData.socials.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-stone-100 dark:bg-stone-900 border border-stone-300 dark:border-stone-800 text-xs font-mono text-stone-700 dark:text-stone-300 hover:border-stone-500 transition-colors flex items-center gap-2"
+              >
+                <LeetcodeIcon className="w-4 h-4" />
+                <span>LeetCode</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-stone-400" />
               </a>
             </div>

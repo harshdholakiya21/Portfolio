@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowDown, Copy, Check, Sparkles, ExternalLink, GraduationCap, Code2, Globe } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 import { profileData } from '../data/profile';
 import { useToast } from './Toast';
 
@@ -29,7 +29,7 @@ export const Hero = () => {
         {/* Top Status Pill */}
         <div className="mb-6 inline-flex items-center gap-2 px-3 py-1 bg-stone-100 dark:bg-stone-900 border border-stone-300 dark:border-stone-800 font-mono text-xs text-stone-700 dark:text-stone-300">
           <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-          <span>4th-Year CSE (AI) Student &bull; Parul University</span>
+          <span>B.Tech CSE (AI) Student (2023–2027) &bull; Parul University</span>
         </div>
 
         {/* Hero Grid: Intro Text (Left) & Photo (Right) */}
@@ -37,15 +37,15 @@ export const Hero = () => {
           {/* Left Column (7 cols): Introduction */}
           <div className="lg:col-span-7 space-y-6">
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.12] tracking-tight text-stone-950 dark:text-stone-50">
-              Building clean web apps,{' '}
+              Building responsive web apps,{' '}
               <span className="italic font-serif text-stone-700 dark:text-stone-300 underline decoration-amber-600/40 dark:decoration-amber-400/40 decoration-1 underline-offset-8">
-                software tools
+                RESTful backends
               </span>{' '}
-              & digital projects.
+              & automated software.
             </h1>
 
             <p className="text-base sm:text-lg text-stone-600 dark:text-stone-300 font-sans max-w-2xl leading-relaxed">
-              Hi, I'm <strong className="font-semibold text-stone-900 dark:text-stone-100">{profileData.name}</strong>. I'm a 4th-year Computer Science & Engineering student at Parul University. I enjoy building responsive web applications, writing Python scripts and automation tools, and creating clean, intuitive user experiences.
+              Hi, I'm <strong className="font-semibold text-stone-900 dark:text-stone-100">{profileData.name}</strong>. {profileData.bio.hero}
             </p>
 
             {/* Action Buttons */}
@@ -90,6 +90,16 @@ export const Hero = () => {
                 >
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
+                <a
+                  href={profileData.socials.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-stone-100 dark:bg-stone-900 text-stone-700 dark:text-stone-300 border border-stone-300 dark:border-stone-800 hover:text-stone-950 dark:hover:text-stone-50 hover:border-stone-400 transition-colors"
+                  aria-label="LeetCode Profile"
+                  title={`LeetCode: ${profileData.socials.leetcodeUsername}`}
+                >
+                  <LeetcodeIcon className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -113,19 +123,19 @@ export const Hero = () => {
                   <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
                   <span className="font-semibold">{profileData.name}</span>
                 </div>
-                <span className="text-[10px] text-amber-400 uppercase">Parul Univ '26</span>
+                <span className="text-[10px] text-amber-400 uppercase">Parul Univ '23–'27</span>
               </div>
             </div>
 
             {/* Subtle Floating Badges */}
             <div className="hidden sm:flex absolute -top-3 -left-3 z-20 items-center gap-2 p-2 bg-stone-50/95 dark:bg-[#10141d]/95 backdrop-blur-md border border-stone-300 dark:border-stone-700 shadow-sm font-mono text-xs text-stone-800 dark:text-stone-200">
               <GraduationCap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-              <span>4th-Year CSE (AI)</span>
+              <span>B.Tech CSE (AI)</span>
             </div>
 
             <div className="hidden sm:flex absolute -bottom-3 -right-3 z-20 items-center gap-2 p-2 bg-stone-50/95 dark:bg-[#10141d]/95 backdrop-blur-md border border-stone-300 dark:border-stone-700 shadow-sm font-mono text-xs text-stone-800 dark:text-stone-200">
               <Code2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>React & Python</span>
+              <span>React & Django</span>
             </div>
           </div>
         </div>

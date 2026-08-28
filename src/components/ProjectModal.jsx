@@ -120,14 +120,25 @@ export const ProjectModal = ({ project, onClose }) => {
 
           {/* Modal Footer Links */}
           <div className="pt-6 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-4 text-xs font-mono text-stone-500">
-              <span>Author: Harsh Dholakiya</span>
+            <div className="flex items-center gap-2 text-xs font-mono text-stone-500">
+              <span className="font-semibold text-stone-700 dark:text-stone-300">Harsh Dholakiya</span>
               <span>//</span>
-              <span>4th Year CSE (AI) Parul University</span>
+              <span>B.Tech CSE (AI) Parul University (2023–2027)</span>
             </div>
 
-            <div className="flex items-center gap-3">
-              {project.github && (
+            <div className="flex flex-wrap items-center gap-3">
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-xs font-mono font-medium bg-stone-900 text-stone-50 dark:bg-stone-100 dark:text-stone-900 hover:bg-stone-800 dark:hover:bg-stone-200 flex items-center gap-2 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Live Application</span>
+                </a>
+              )}
+              {project.github ? (
                 <a
                   href={project.github}
                   target="_blank"
@@ -137,7 +148,11 @@ export const ProjectModal = ({ project, onClose }) => {
                   <GithubIcon className="w-4 h-4" />
                   <span>GitHub Repository</span>
                 </a>
-              )}
+              ) : project.isPrivateRepo ? (
+                <span className="px-3 py-2 text-xs font-mono text-stone-500 border border-dashed border-stone-300 dark:border-stone-700">
+                  Private Repository
+                </span>
+              ) : null}
             </div>
           </div>
         </div>
@@ -306,7 +321,7 @@ const ResidentialSimulator = () => {
   return (
     <div className="p-4 sm:p-5 bg-stone-900 text-stone-100 dark:bg-black border border-stone-700 font-mono space-y-4">
       <div className="flex justify-between items-center pb-2 border-b border-stone-800">
-        <span className="text-xs text-sky-400 font-semibold">Urban Nest Society Gateway</span>
+        <span className="text-xs text-sky-400 font-semibold">UrbanNest Society Gateway</span>
         <span className="text-[10px] text-stone-400">Wing A &bull; Unit 402</span>
       </div>
 

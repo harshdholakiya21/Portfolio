@@ -1,54 +1,58 @@
 export const projectsData = [
   {
+    id: "urban-nest",
+    title: "UrbanNest — Residential Society Management",
+    tagline: "A full-stack residential community web application with visitor gate passes, notice broadcasts, and maintenance billing.",
+    category: "Web Applications",
+    featured: true,
+    year: "2026",
+    role: "Full-Stack Developer",
+    tech: ["React", "Django", "MongoDB", "Tailwind CSS", "Render"],
+    metrics: {
+      framework: "React + Django REST",
+      database: "MongoDB Atlas",
+      deployment: "Vercel (Frontend) & Render (Backend)"
+    },
+    summary: "An intuitive society management platform designed to replace manual visitor logbooks with fast digital gate passes, streamline monthly maintenance fee tracking, and broadcast important society notices in real time.",
+    architecture: [
+      "Django REST framework backend deployed on Render handling authenticated API endpoints and MongoDB transactions",
+      "Digital visitor pass generator with rapid QR / pass validation and status updates",
+      "Dynamic noticeboard timeline with priority filters and maintenance tracking dashboards",
+      "Modern responsive UI styled with Tailwind CSS for seamless resident and security guard workflows"
+    ],
+    github: null, // Private repository
+    isPrivateRepo: true,
+    demo: "https://urban-nest-in.vercel.app",
+    badge: "Full-Stack",
+    accentColor: "#0284C7",
+    interactivePreview: "nest"
+  },
+  {
     id: "hd-bank",
     title: "HD Bank — Online Banking Web Application",
     tagline: "A modern banking dashboard with real-time balance tracking, transaction search, and interactive transfer simulator.",
     category: "Web Applications",
     featured: true,
     year: "2026",
-    role: "Developer",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    role: "Full-Stack Developer",
+    tech: ["React", "Django", "MongoDB", "Tailwind CSS"],
     metrics: {
-      framework: "React + Express",
+      framework: "React + Django REST",
       database: "MongoDB Atlas",
-      features: "Live Transfers, Ledger, Card Controls"
+      security: "JWT Auth & Account Validation"
     },
-    summary: "A modern banking dashboard built with React, Node.js, and MongoDB. Features real-time balance calculations, wire transfer simulator, categorized transaction search, and debit card security controls.",
+    summary: "A modern online banking application engineered with React, Django REST framework, and MongoDB. Features real-time balance calculations, wire transfer simulator, categorized transaction search, and debit card security controls.",
     architecture: [
-      "Modular transaction ledger with instant search and category filtering",
-      "Interactive debit card preview with one-click lock and freeze states",
-      "Clean responsive dashboard layout optimized for mobile and desktop screens"
+      "Django REST backend managing user accounts, ledger state, and transactional consistency",
+      "Modular transaction ledger with instant multi-field search and category filtering",
+      "Interactive debit card security controls with one-click freeze states and spending limit previews",
+      "Clean, tactile dashboard layout optimized across mobile and desktop viewpoints"
     ],
-    github: "https://github.com/harshdholakiya21/HD_Bank",
-    demo: "https://github.com/harshdholakiya21/HD_Bank",
-    badge: "Web App",
+    github: "https://github.com/harshdholakiya21/HD-Bank",
+    demo: "https://hd-bank-in.vercel.app",
+    badge: "Full-Stack",
     accentColor: "#059669",
     interactivePreview: "bank"
-  },
-  {
-    id: "urban-nest",
-    title: "Urban Nest — Society Management Platform",
-    tagline: "A residential community web application with visitor gate passes, notice broadcasts, and maintenance tracking.",
-    category: "Web Applications",
-    featured: true,
-    year: "2026",
-    role: "Developer",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    metrics: {
-      type: "Society Management",
-      modules: "Visitor Passes, Maintenance, Notices"
-    },
-    summary: "An intuitive community web application designed to replace paper visitor logs with quick digital passes, automate monthly dues tracking, and publish society notice broadcasts.",
-    architecture: [
-      "Digital visitor pass generator with instant approval confirmation",
-      "Noticeboard timeline with priority tags and announcement filters",
-      "Clean responsive layout designed for easy resident and staff navigation"
-    ],
-    github: "https://github.com/harshdholakiya21/Urban-Nest",
-    demo: "https://github.com/harshdholakiya21/Urban-Nest",
-    badge: "Community App",
-    accentColor: "#0284C7",
-    interactivePreview: "nest"
   },
   {
     id: "youtube-automation",
@@ -58,16 +62,16 @@ export const projectsData = [
     featured: true,
     year: "2026",
     role: "Python Developer",
-    tech: ["Python", "AI / LLM API", "MoviePy", "YouTube Data API", "TTS"],
+    tech: ["Python", "MoviePy", "TTS", "LLM APIs", "YouTube Data API"],
     metrics: {
       language: "Python",
-      automation: "Automated Script & Video Composition"
+      automation: "Script Gen, Voice Synthesis & Compositing"
     },
-    summary: "An automated Python pipeline that turns video topic ideas into finished video shorts. It uses AI to generate engaging scripts, converts text to voiceover audio, overlays timed subtitles, and renders video clips ready for YouTube.",
+    summary: "An automated Python pipeline that converts video topic ideas into fully rendered video shorts. It utilizes LLM APIs to generate engaging video scripts, converts text to voiceover audio, overlays timed dynamic subtitles, and connects to YouTube Data API for scheduled publishing.",
     architecture: [
-      "Python pipeline connecting script generation, audio synthesis, and video compositing",
-      "Automated animated subtitle overlays synced with audio timestamps",
-      "YouTube Data API integration for scheduled uploads and tag management"
+      "End-to-end Python pipeline connecting LLM prompt generation, TTS audio synthesis, and video clip compositing",
+      "MoviePy engine rendering dynamic subtitle overlays synchronized with audio waveform timestamps",
+      "YouTube Data API integration for scheduled uploads, category tagging, and metadata automation"
     ],
     github: "https://github.com/harshdholakiya21",
     demo: "https://github.com/harshdholakiya21",
@@ -76,48 +80,23 @@ export const projectsData = [
     interactivePreview: "ai_bot"
   },
   {
-    id: "spotify-web",
-    title: "Spotify Web Player Experience",
-    tagline: "A responsive recreation of the Spotify web interface with live audio playback, timeline scrubber, and volume controls.",
+    id: "keyvault",
+    title: "KeyVault — Cryptographic Password Manager",
+    tagline: "A client-side cryptographic credential manager with customizable password generation and instant strength entropy scoring.",
     category: "Tools",
-    featured: false,
+    featured: true,
     year: "2025",
     role: "Frontend Developer",
-    tech: ["JavaScript", "React", "HTML5 Audio API", "CSS Grid"],
-    metrics: {
-      ui: "Responsive Media Player",
-      audio: "Web Audio Engine"
-    },
-    summary: "An audio streaming interface featuring an interactive bottom music player dock, real-time playback scrubber, dynamic playlist display, and volume level controls.",
-    architecture: [
-      "HTML5 Web Audio API integration with interactive playback state",
-      "Smooth CSS timeline scrubber with responsive drag-and-click seeking",
-      "Keyboard shortcut bindings for quick play/pause controls"
-    ],
-    github: "https://github.com/harshdholakiya21/spotify-clone",
-    demo: "https://github.com/harshdholakiya21",
-    badge: "Media UI",
-    accentColor: "#10B981",
-    interactivePreview: "audio"
-  },
-  {
-    id: "password-vault",
-    title: "KeyVault — Password & Security Tool",
-    tagline: "A client-side credential manager with customizable password generation and instant strength entropy scoring.",
-    category: "Tools",
-    featured: false,
-    year: "2025",
-    role: "Developer",
     tech: ["React", "Web Crypto API", "Tailwind CSS"],
     metrics: {
-      security: "Client-Side Only",
-      features: "Custom Rules & 1-Click Copy"
+      security: "Client-Side Cryptography",
+      features: "Custom Entropy Scoring & 1-Click Copy"
     },
-    summary: "A practical security tool that generates strong, customizable passwords with instant entropy scoring, copy protection, and a clean card-based layout.",
+    summary: "A practical, privacy-first security tool that generates cryptographically strong, customizable passwords with real-time entropy evaluation, custom character sets, and copy protection.",
     architecture: [
-      "Real-time entropy algorithm evaluating password strength and character sets",
-      "Secure random character selection using the browser Web Crypto API",
-      "1-click copy with instant toast feedback"
+      "Real-time entropy mathematical scoring algorithm evaluating password strength against dictionary attacks",
+      "Secure random byte generation utilizing the browser native Web Crypto API (`crypto.getRandomValues`)",
+      "1-click clipboard copy integration with instant visual toast notifications"
     ],
     github: "https://github.com/harshdholakiya21",
     demo: "https://github.com/harshdholakiya21",
@@ -126,28 +105,29 @@ export const projectsData = [
     interactivePreview: "vault"
   },
   {
-    id: "ultraedit-clone",
-    title: "UltraEdit Code Studio Clone",
-    tagline: "A desktop-style web code editor workspace with tabbed document navigation and syntax theme switching.",
-    category: "Tools",
+    id: "portfolio",
+    title: "Personal Portfolio & Dev Console",
+    tagline: "A tactile, minimalist developer portfolio featuring interactive project simulators, command palette (⌘K), and dark mode.",
+    category: "Web Applications",
     featured: false,
-    year: "2025",
-    role: "Developer",
-    tech: ["React", "CSS Architecture", "Flexbox Grid"],
+    year: "2026",
+    role: "Frontend Developer",
+    tech: ["React", "Tailwind CSS", "Vite", "JavaScript (ES6+)"],
     metrics: {
-      layout: "Multi-Tab Workspace",
-      theming: "Light & Dark Themes"
+      framework: "React + Vite",
+      styling: "Tailwind CSS + Blueprint Theme",
+      interactivity: "Live Project Simulators & ⌘K Palette"
     },
-    summary: "Replicated the rich multi-pane code editor layout of UltraEdit, incorporating multi-tab file switching, line numbering, split views, and color themes.",
+    summary: "My personal developer portfolio designed with an editorial, blueprint aesthetic. Includes interactive project sandboxes, a keyboard-driven command palette (⌘K), responsive design, and contact form handling.",
     architecture: [
-      "Multi-tab document switcher with active file state management",
-      "Interactive code preview with syntax highlighting and line numbers",
-      "Custom theme toggling between dark obsidian and clean paper styles"
+      "Custom interactive simulators embedded within project modal previews for immediate hands-on testing",
+      "Global Command Palette (⌘K) providing keyboard navigation across all sections, links, and projects",
+      "Fully responsive CSS architecture with dark obsidian and light paper themes"
     ],
-    github: "https://github.com/harshdholakiya21",
-    demo: "https://github.com/harshdholakiya21",
-    badge: "Dev Workspace",
-    accentColor: "#F59E0B",
+    github: "https://github.com/harshdholakiya21/Portfolio",
+    demo: "https://harshdholakiya-portfolio.vercel.app",
+    badge: "Portfolio",
+    accentColor: "#D97706",
     interactivePreview: "editor"
   }
 ];

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, FolderCode, Sparkles, Layers, User, Mail, Moon, Sun, ArrowRight } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 import { projectsData } from '../data/projects';
 import { profileData } from '../data/profile';
 import { useToast } from './Toast';
@@ -114,6 +114,16 @@ export const CommandPalette = ({ isOpen, onClose, darkMode, setDarkMode }) => {
       icon: LinkedinIcon,
       action: () => {
         window.open(profileData.socials.linkedin, '_blank');
+        onClose();
+      }
+    },
+    {
+      id: 'leetcode',
+      title: `Open LeetCode Profile (${profileData.socials.leetcodeUsername})`,
+      category: 'Links',
+      icon: LeetcodeIcon,
+      action: () => {
+        window.open(profileData.socials.leetcode, '_blank');
         onClose();
       }
     },

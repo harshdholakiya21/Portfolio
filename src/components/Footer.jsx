@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Mail } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 import { profileData } from '../data/profile';
 
 export const Footer = () => {
@@ -18,7 +18,7 @@ export const Footer = () => {
               {profileData.name}
             </p>
             <p className="text-stone-500 text-[11px]">
-              Computer Science & Engineering (AI) &bull; Parul University
+              B.Tech Computer Science & Engineering (AI) &bull; Parul University (2023–2027)
             </p>
           </div>
 
@@ -32,13 +32,13 @@ export const Footer = () => {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
           <div className="space-y-1.5">
             <span className="uppercase text-[10px] tracking-widest text-stone-400">
               About
             </span>
             <p className="text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
-              4th-year student at Parul University passionate about building full-stack web applications and AI tools.
+              B.Tech CSE (AI) student at Parul University passionate about building full-stack web applications, Django APIs, and Python automation tools.
             </p>
           </div>
 
@@ -59,6 +59,21 @@ export const Footer = () => {
 
           <div className="space-y-1.5">
             <span className="uppercase text-[10px] tracking-widest text-stone-400">
+              LeetCode Profile
+            </span>
+            <a
+              href={profileData.socials.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-stone-900 dark:text-stone-100 hover:underline flex items-center gap-1.5"
+            >
+              <LeetcodeIcon className="w-3.5 h-3.5" />
+              <span>leetcode.com/u/{profileData.socials.leetcodeUsername}</span>
+            </a>
+          </div>
+
+          <div className="space-y-1.5">
+            <span className="uppercase text-[10px] tracking-widest text-stone-400">
               Email
             </span>
             <a
@@ -74,7 +89,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-stone-500">
           <span>&copy; {new Date().getFullYear()} Harsh Dholakiya. Built with React & Tailwind CSS.</span>
-          <span>Open for Opportunities</span>
+          <span>Open for Opportunities & Projects</span>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap, MapPin, Sparkles, Check, ArrowUpRight, Mail, Code, Heart } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 import { profileData } from '../data/profile';
 
 export const AboutSection = () => {
@@ -18,7 +18,7 @@ export const AboutSection = () => {
             Background & Education
           </h2>
           <p className="text-stone-600 dark:text-stone-400 font-sans max-w-2xl text-sm sm:text-base">
-            A little more about who I am, what I study, and what drives my passion for software and web development.
+            A little more about who I am, what I study, and what drives my passion for full-stack engineering and automation.
           </p>
         </div>
 
@@ -27,21 +27,21 @@ export const AboutSection = () => {
           {/* Left Column: Personal Story */}
           <div className="lg:col-span-7 space-y-5 text-stone-700 dark:text-stone-300 font-sans leading-relaxed text-sm sm:text-base">
             <p className="text-xl sm:text-2xl font-serif text-stone-950 dark:text-stone-100 font-normal leading-snug">
-              "I love creating digital products that combine clean design with dependable, functional code."
+              "I love creating digital products that combine clean UI design with dependable RESTful backend logic."
             </p>
 
             <p>
-              I am currently in my final year pursuing a <strong className="text-stone-900 dark:text-stone-100 font-semibold">B.Tech in Computer Science & Engineering (Artificial Intelligence)</strong> at <strong className="text-stone-900 dark:text-stone-100 font-semibold">Parul University, Vadodara</strong>. Throughout my degree, I have focused on building hands-on projects that bridge visual design and backend logic.
+              I am a <strong className="text-stone-900 dark:text-stone-100 font-semibold">B.Tech Computer Science & Engineering (AI) student (2023–2027)</strong> at <strong className="text-stone-900 dark:text-stone-100 font-semibold">Parul University, Vadodara</strong>. Throughout my studies, I have focused on building hands-on projects that bridge responsive frontend interfaces and scalable backend logic.
             </p>
 
             <p>
-              From creating interactive web applications like <strong className="text-stone-900 dark:text-stone-100 font-medium">HD Bank</strong> and <strong className="text-stone-900 dark:text-stone-100 font-medium">Urban Nest</strong> to automating media workflows with Python and experimenting with modern UI animations, I enjoy exploring new tools and shipping functional, user-friendly software.
+              From engineering full-stack platforms like <strong className="text-stone-900 dark:text-stone-100 font-medium">UrbanNest</strong> (Residential Society Management with React, Django & MongoDB) and <strong className="text-stone-900 dark:text-stone-100 font-medium">HD Bank</strong> (Online Banking App) to automating media pipelines with Python and exploring modern Web APIs, I focus on shipping maintainable, reliable software.
             </p>
 
             {/* Interests Badges */}
             <div className="pt-3 space-y-2.5">
               <h4 className="font-mono text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400">
-                Core Areas of Interest
+                Core Areas of Focus
               </h4>
               <div className="flex flex-wrap gap-2">
                 {profileData.interests.map((interest, idx) => (
@@ -66,7 +66,7 @@ export const AboutSection = () => {
                   <h3 className="font-serif text-lg text-stone-950 dark:text-stone-50 font-medium">
                     Education
                   </h3>
-                  <span className="font-mono text-[11px] text-stone-500">Parul University</span>
+                  <span className="font-mono text-[11px] text-stone-500">Parul University &bull; Vadodara</span>
                 </div>
               </div>
 
@@ -79,8 +79,8 @@ export const AboutSection = () => {
                     Parul University &bull; Vadodara, Gujarat
                   </p>
                   <div className="pt-1 flex justify-between text-stone-500 text-[11px]">
-                    <span>4th Year Student</span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold">2023 — Present</span>
+                    <span>Degree Program</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold">2023 — 2027</span>
                   </div>
                 </div>
 
@@ -143,6 +143,19 @@ export const AboutSection = () => {
                   <span className="flex items-center gap-2 text-stone-700 dark:text-stone-300">
                     <LinkedinIcon className="w-3.5 h-3.5" />
                     <span>linkedin.com/in/{profileData.socials.linkedinUsername}</span>
+                  </span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-stone-400" />
+                </a>
+
+                <a
+                  href={profileData.socials.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex items-center justify-between hover:border-stone-400 transition-colors"
+                >
+                  <span className="flex items-center gap-2 text-stone-700 dark:text-stone-300">
+                    <LeetcodeIcon className="w-3.5 h-3.5" />
+                    <span>leetcode.com/u/{profileData.socials.leetcodeUsername}</span>
                   </span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-stone-400" />
                 </a>
