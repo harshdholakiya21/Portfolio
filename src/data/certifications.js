@@ -10,7 +10,7 @@ export const certificationsData = [
     verifyUrl: "https://coursera.org/verify/specialization/VEN01KGU144B",
     image: "/certificates/ml-specialization.png",
     featured: true,
-    badge: "Specialization",
+    badge: "Specialization (3 Courses)",
     accentColor: "#D97706",
     summary: "Comprehensive 3-course specialization covering fundamental to advanced machine learning concepts, statistical learning, neural architectures, and reinforcement learning.",
     skills: [
@@ -22,29 +22,75 @@ export const certificationsData = [
       "Anomaly Detection",
       "Recommender Systems",
       "Reinforcement Learning"
-    ],
-    subCourses: [
-      {
-        title: "Supervised Machine Learning: Regression and Classification",
-        date: "July 2026",
-        credentialId: "NY5OZPUYPXW5",
-        verifyUrl: "https://coursera.org/verify/NY5OZPUYPXW5",
-        image: "/certificates/supervised-ml.png"
-      },
-      {
-        title: "Advanced Learning Algorithms",
-        date: "August 2026",
-        credentialId: "377FSH93OWJ2",
-        verifyUrl: "https://coursera.org/verify/377FSH93OWJ2",
-        image: "/certificates/advanced-learning-algorithms.png"
-      },
-      {
-        title: "Unsupervised Learning, Recommenders, Reinforcement Learning",
-        date: "August 2026",
-        credentialId: "UNOSS75RE9W3",
-        verifyUrl: "https://coursera.org/verify/UNOSS75RE9W3",
-        image: "/certificates/unsupervised-learning.png"
-      }
+    ]
+  },
+  {
+    id: "supervised-ml",
+    title: "Supervised Machine Learning: Regression and Classification",
+    issuer: "DeepLearning.AI & Stanford Online",
+    instructor: "Andrew Ng (Stanford University & DeepLearning.AI)",
+    category: "Machine Learning & AI",
+    date: "July 2026",
+    credentialId: "NY5OZPUYPXW5",
+    verifyUrl: "https://coursera.org/verify/NY5OZPUYPXW5",
+    image: "/certificates/supervised-ml.png",
+    featured: true,
+    badge: "Stanford Course 01",
+    accentColor: "#D97706",
+    summary: "Built machine learning models in Python using NumPy and scikit-learn for linear regression, multi-class logistic regression, gradient descent optimization, cost function minimization, and regularization.",
+    skills: [
+      "Linear Regression",
+      "Logistic Regression",
+      "Gradient Descent",
+      "Cost Function Minimization",
+      "Overfitting & Regularization",
+      "NumPy & Scikit-Learn"
+    ]
+  },
+  {
+    id: "advanced-learning-algorithms",
+    title: "Advanced Learning Algorithms",
+    issuer: "DeepLearning.AI & Stanford Online",
+    instructor: "Andrew Ng (Stanford University & DeepLearning.AI)",
+    category: "Machine Learning & AI",
+    date: "August 2026",
+    credentialId: "377FSH93OWJ2",
+    verifyUrl: "https://coursera.org/verify/377FSH93OWJ2",
+    image: "/certificates/advanced-learning-algorithms.png",
+    featured: true,
+    badge: "Stanford Course 02",
+    accentColor: "#D97706",
+    summary: "Engineered deep multi-layer neural networks, backpropagation algorithms, decision trees, random forests, and ensemble XGBoost architectures for complex classification tasks.",
+    skills: [
+      "Deep Neural Networks",
+      "Backpropagation",
+      "Decision Trees",
+      "Random Forests",
+      "XGBoost",
+      "TensorFlow & Keras"
+    ]
+  },
+  {
+    id: "unsupervised-learning",
+    title: "Unsupervised Learning, Recommenders, Reinforcement Learning",
+    issuer: "DeepLearning.AI & Stanford Online",
+    instructor: "Andrew Ng (Stanford University & DeepLearning.AI)",
+    category: "Machine Learning & AI",
+    date: "August 2026",
+    credentialId: "UNOSS75RE9W3",
+    verifyUrl: "https://coursera.org/verify/UNOSS75RE9W3",
+    image: "/certificates/unsupervised-learning.png",
+    featured: true,
+    badge: "Stanford Course 03",
+    accentColor: "#D97706",
+    summary: "Implemented unsupervised clustering with K-means, Gaussian anomaly detection, content-based & collaborative filtering recommender systems, and Deep Q-Learning reinforcement agents.",
+    skills: [
+      "K-Means Clustering",
+      "Anomaly Detection",
+      "Collaborative Filtering",
+      "Recommender Systems",
+      "Reinforcement Learning",
+      "Deep Q-Networks (DQN)"
     ]
   },
   {
@@ -133,6 +179,27 @@ export const certificationsData = [
       "Object-Oriented Design (OOP)",
       "Core Java APIs",
       "Problem Solving"
+    ]
+  },
+  {
+    id: "digital-marketing",
+    title: "Mastering Digital Marketing & SEO",
+    issuer: "Zenith Future LLP",
+    instructor: "Zenith Future Industry Experts",
+    category: "Competitions & Events",
+    date: "April 2025",
+    credentialId: "ZFLLP02CERT043025053",
+    verifyUrl: null,
+    image: "/certificates/digital-marketing.png",
+    featured: false,
+    badge: "Industry Webinar",
+    accentColor: "#6B7280",
+    summary: "Comprehensive session covering Search Engine Optimization (SEO), Social Media Marketing, Google Ads, and content strategies for web platforms.",
+    skills: [
+      "SEO Optimization",
+      "Content Strategy",
+      "Google Ads",
+      "Digital Marketing"
     ]
   }
 ];
