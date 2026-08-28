@@ -8,6 +8,7 @@ export const certificationsData = [
     date: "August 2026",
     credentialId: "VEN01KGU144B",
     verifyUrl: "https://coursera.org/verify/specialization/VEN01KGU144B",
+    image: "/certificates/ml-specialization.png",
     featured: true,
     badge: "Specialization",
     accentColor: "#D97706",
@@ -27,19 +28,22 @@ export const certificationsData = [
         title: "Supervised Machine Learning: Regression and Classification",
         date: "July 2026",
         credentialId: "NY5OZPUYPXW5",
-        verifyUrl: "https://coursera.org/verify/NY5OZPUYPXW5"
+        verifyUrl: "https://coursera.org/verify/NY5OZPUYPXW5",
+        image: "/certificates/supervised-ml.png"
       },
       {
         title: "Advanced Learning Algorithms",
         date: "August 2026",
         credentialId: "377FSH93OWJ2",
-        verifyUrl: "https://coursera.org/verify/377FSH93OWJ2"
+        verifyUrl: "https://coursera.org/verify/377FSH93OWJ2",
+        image: "/certificates/advanced-learning-algorithms.png"
       },
       {
         title: "Unsupervised Learning, Recommenders, Reinforcement Learning",
         date: "August 2026",
         credentialId: "UNOSS75RE9W3",
-        verifyUrl: "https://coursera.org/verify/UNOSS75RE9W3"
+        verifyUrl: "https://coursera.org/verify/UNOSS75RE9W3",
+        image: "/certificates/unsupervised-learning.png"
       }
     ]
   },
@@ -52,6 +56,7 @@ export const certificationsData = [
     date: "Jan — Apr 2025",
     credentialId: "NPTEL25CS15S759700508",
     verifyUrl: null,
+    image: "/certificates/computer-networks.png",
     featured: true,
     badge: "NPTEL Elite",
     accentColor: "#0284C7",
@@ -75,6 +80,7 @@ export const certificationsData = [
     date: "May 2025",
     credentialId: "LUEBWAIMAY12536",
     verifyUrl: "https://www.letsupgrade.in/verify",
+    image: "/certificates/gemini-video-generator.png",
     featured: true,
     badge: "GenAI Workshop",
     accentColor: "#059669",
@@ -96,6 +102,7 @@ export const certificationsData = [
     date: "July 2026",
     credentialId: "Unstop-QuizOff-2026",
     verifyUrl: null,
+    image: "/certificates/quizoff-ai-2026.png",
     featured: false,
     badge: "National Event",
     accentColor: "#8B5CF6",
@@ -116,6 +123,7 @@ export const certificationsData = [
     date: "May — June 2026",
     credentialId: "CA/DF1/74804",
     verifyUrl: null,
+    image: "/certificates/codealpha-java-internship.png",
     featured: false,
     badge: "Internship Selection",
     accentColor: "#F59E0B",
