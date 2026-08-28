@@ -10,7 +10,7 @@ export const AboutSection = () => {
         {/* Section Header */}
         <div className="space-y-2 pb-8 border-b border-stone-200 dark:border-stone-800">
           <div className="flex items-center gap-2 font-mono text-xs text-stone-500 uppercase tracking-widest">
-            <span>Section // 03</span>
+            <span>Section // 04</span>
             <span>&bull;</span>
             <span>About Me</span>
           </div>

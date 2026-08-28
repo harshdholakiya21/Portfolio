@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, FolderCode, Sparkles, Layers, User, Mail, Moon, Sun, ArrowRight } from 'lucide-react';
+import { Search, X, FolderCode, Sparkles, Layers, User, Mail, Moon, Sun, ArrowRight, Award, ShieldCheck } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 import { projectsData } from '../data/projects';
+import { certificationsData } from '../data/certifications';
 import { profileData } from '../data/profile';
 import { useToast } from './Toast';
 
@@ -37,6 +38,16 @@ export const CommandPalette = ({ isOpen, onClose, darkMode, setDarkMode }) => {
       icon: Layers,
       action: () => {
         document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+        onClose();
+      }
+    },
+    {
+      id: 'certifications',
+      title: 'View Verified Certifications & Specializations',
+      category: 'Navigation',
+      icon: Award,
+      action: () => {
+        document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' });
         onClose();
       }
     },
@@ -134,6 +145,16 @@ export const CommandPalette = ({ isOpen, onClose, darkMode, setDarkMode }) => {
       icon: FolderCode,
       action: () => {
         document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+        onClose();
+      }
+    })),
+    ...certificationsData.map((c) => ({
+      id: `cert-${c.id}`,
+      title: `Certification: ${c.title} (${c.issuer})`,
+      category: 'Certifications',
+      icon: Award,
+      action: () => {
+        document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' });
         onClose();
       }
     }))

@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProjectShowcase } from './components/ProjectShowcase';
 import { ToolkitSection } from './components/ToolkitSection';
+import { CertificationsSection } from './components/CertificationsSection';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -63,10 +64,13 @@ export function App() {
           {/* 3. Skills & Technologies */}
           <ToolkitSection />
 
-          {/* 4. Background & Education */}
+          {/* 4. Verified Certifications & Specializations */}
+          <CertificationsSection />
+
+          {/* 5. Background & Education */}
           <AboutSection />
 
-          {/* 5. Contact & Message Form */}
+          {/* 6. Contact & Message Form */}
           <ContactSection />
         </main>
 

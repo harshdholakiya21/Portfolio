@@ -94,7 +94,7 @@ export const ContactSection = () => {
           {/* Left Column */}
           <div className="lg:col-span-6 space-y-5">
             <div className="flex items-center gap-2 font-mono text-xs text-stone-500 uppercase tracking-widest">
-              <span>Section // 04</span>
+              <span>Section // 05</span>
               <span>&bull;</span>
               <span>Contact</span>
             </div>

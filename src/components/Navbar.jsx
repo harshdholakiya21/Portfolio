@@ -17,6 +17,7 @@ export const Navbar = ({ darkMode, setDarkMode, onOpenCommandPalette }) => {
   const navLinks = [
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Certificates', href: '#certifications' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
